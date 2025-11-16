@@ -1,0 +1,34 @@
+[
+  {
+    "model": "api.cidade",
+    "pk": "9affc072-769c-4a5d-ae9b-653230a789a8",
+    "fields": {
+      "codigo": "JUJU",
+      "nome": "Jujulândia"
+    }
+  },
+  {
+    "model": "api.cidade",
+    "pk": "1f8ada39-6d98-4af1-8983-d03c4a1d006e",
+    "fields": {
+      "codigo": "MICA",
+      "nome": "Minho Carrone"
+    }
+  },
+  {
+    "model": "api.cidade",
+    "pk": "ac066245-a98c-40c3-9b01-98f747b0dd06",
+    "fields": {
+      "codigo": "CAME",
+      "nome": "Cara Metade"
+    }
+  },
+  {
+    "model": "api.cidade",
+    "pk": "80cb6c31-6e41-4964-b375-08f03defa3a6",
+    "fields": {
+      "codigo": "LIVE",
+      "nome": "Lindo Vertical"
+    }
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "model": "api.aeroporto",
+    "fields": {
+      "nome": "VerdeAmarelo",
+      "codigo": "VEAM",
+      "cidade": "9affc072-769c-4a5d-ae9b-653230a789a8"
+    }
+  },
+  {
+    "model": "api.aeroporto",
+    "fields": {
+      "nome": "Virataças",
+      "codigo": "VRTA",
+      "cidade": "1f8ada39-6d98-4af1-8983-d03c4a1d006e"
+    }
+  },
+  {
+    "model": "api.aeroporto",
+    "fields": {
+      "nome": "Afonso Pombo",
+      "codigo": "AFPO",
+      "cidade": "ac066245-a98c-40c3-9b01-98f747b0dd06"
+    }
+  },
+    {
+    "model": "api.aeroporto",
+    "fields": {
+      "nome": "Botas do Judas",
+      "codigo": "AFPO",
+      "cidade": "80cb6c31-6e41-4964-b375-08f03defa3a6"
+    }
+  }
+]

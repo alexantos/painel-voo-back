@@ -16,7 +16,8 @@ class Cidade(models.Model):
 
 class Aeroporto(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    codigo = models.CharField(max_length=8)
+    codigo = models.CharField(max_length=4)
+    nome = models.CharField(max_length=64)
     cidade = models.ForeignKey(to=Cidade, on_delete=models.PROTECT)
 
     def __str__(self):
@@ -44,10 +45,12 @@ class Voo(models.Model):
 
 class StatusVoo(models.Model):
     voo = models.ForeignKey(to=Voo, on_delete=models.PROTECT)
-    status = models.CharField(choices=STATUS, max_length=16)
     posicao = models.CharField(choices=POSICAO, max_length=16)  # Origem, EmVoo, Destino
-    portao = models.CharField(max_length=2, null=True, blank=True)
     data_hora = models.DateTimeField()
+
+    # Criar lógica no gerador e na modelagem para embarque e desembarque detalhados...
+    # status = models.CharField(choices=STATUS, max_length=16)
+    # portao = models.CharField(max_length=2, null=True, blank=True)
 
     # history = django_history
 

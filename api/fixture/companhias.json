@@ -1,0 +1,26 @@
+[
+  {
+    "model": "api.companhia",
+    "fields": {
+      "nome": "Tita Airlines"
+    }
+  },
+  {
+    "model": "api.companhia",
+    "fields": {
+      "nome": "Bob Airlines"
+    }
+  },
+  {
+    "model": "api.companhia",
+    "fields": {
+      "nome": "Faísca Airlines"
+    }
+  },
+  {
+    "model": "api.companhia",
+    "fields": {
+      "nome": "Trave Airlines"
+    }
+  }
+]
