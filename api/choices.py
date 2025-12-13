@@ -1,9 +1,17 @@
 STATUS = {
+    # ORIGEM
     "CONFIRMADO": "Confirmado",
-    "DECOLADO": "Decolado",
-    "CANCELADO": "Cancelado",
+    "EMBARCANDO": "Embarcando",
     "ULTIMA_CHAMADA": "Última chamada",
-    "ENCERRADO": "Encerrado",
+    # EM_VOO
+    "DECOLANDO": "Decolando",
+    "DECOLADO": "Decolado",
+    "APROXIMANDO": "Aproximando",
+    "POUSANDO": "Pousando",
+    # DESTINO
+    "POUSADO": "Pousado",
+    "DESEMBARCANDO": "Desembarcando",
+    "FINALIZADO": "Finalizado",
 }
 
 POSICAO = {

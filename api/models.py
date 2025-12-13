@@ -33,6 +33,7 @@ class Companhia(models.Model):
 
 class Voo(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id_api = models.UUIDField()
     codigo = models.CharField(max_length=8)
     companhia = models.ForeignKey(to=Companhia, on_delete=models.PROTECT)
     origem = models.ForeignKey(to=Aeroporto, on_delete=models.PROTECT, related_name='aeroporto_origem')
