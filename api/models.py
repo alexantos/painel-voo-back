@@ -44,10 +44,23 @@ class Voo(models.Model):
         return self.codigo
 
 
-class StatusVoo(models.Model):
+class DetalheHorarioVoo(models.Model):
+    voo = models.ForeignKey(to=Voo, on_delete=models.PROTECT)
+    previsao_decolagem = models.DateTimeField()
+    horario_decolagem = models.DateTimeField(null=True)
+    previsao_pouso = models.DateTimeField(null=True)
+    horario_pouso = models.DateTimeField(null=True)
+
+    def __str__(self):
+        return self.voo.codigo
+
+
+class PosicaoVoo(models.Model):  # Surte efeito many to one, para cada voo tem o histórico de cada atualização de status
     voo = models.ForeignKey(to=Voo, on_delete=models.PROTECT)
     posicao = models.CharField(choices=POSICAO, max_length=16)  # Origem, EmVoo, Destino
-    data_hora = models.DateTimeField()
+
+    criacao = models.DateTimeField(auto_now_add=True)
+    atualizacao = models.DateTimeField(auto_now=True)
 
     # Criar lógica no gerador e na modelagem para embarque e desembarque detalhados...
     # status = models.CharField(choices=STATUS, max_length=16)
@@ -56,7 +69,18 @@ class StatusVoo(models.Model):
     # history = django_history
 
     def __str__(self):
-        return self.voo.codigo
+        return self.voo.codigo + self.posicao
+
+
+class StatusVoo(models.Model):
+    voo = models.ForeignKey(to=Voo, on_delete=models.PROTECT)
+    status = models.CharField(choices=STATUS, max_length=16)
+
+    criacao = models.DateTimeField(auto_now_add=True)
+    atualizacao = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.voo.codigo + self.status
 
 # class Aeronave(models.Model):
 #     modelo

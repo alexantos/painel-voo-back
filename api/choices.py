@@ -4,10 +4,8 @@ STATUS = {
     "EMBARCANDO": "Embarcando",
     "ULTIMA_CHAMADA": "Última chamada",
     # EM_VOO
-    "DECOLANDO": "Decolando",
     "DECOLADO": "Decolado",
     "APROXIMANDO": "Aproximando",
-    "POUSANDO": "Pousando",
     # DESTINO
     "POUSADO": "Pousado",
     "DESEMBARCANDO": "Desembarcando",
